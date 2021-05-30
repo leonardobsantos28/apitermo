@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /apitermo
+
+spring:
+  datasource:
+    drive-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://pgsql.wlsoftware.com.br:5432/wlsoftware41
+    username: wlsoftware41
+    password: wl131211
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+
+application:
+  description: Projeto API Termo
