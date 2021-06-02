@@ -4,14 +4,20 @@ import javax.validation.constraints.NotNull;
 
 public class ClienteDTO {
 
+
     private Integer idCliente;
 
     @NotNull
     private String nome;
 
     private String endereco;
+    private String numero;
+    private String bairro;
     private String cep;
-    private String cnpj;
+    private String municipio;
+    private String Estado;
+    private String telefone;
+    private String cpfCnpj;
 
     public Integer getIdCliente() {
         return idCliente;
@@ -45,11 +51,51 @@ public class ClienteDTO {
         this.cep = cep;
     }
 
-    public String getCnpj() {
-        return cnpj;
+    public String getNumero() {
+        return numero;
     }
 
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getMunicipio() {
+        return municipio;
+    }
+
+    public void setMunicipio(String municipio) {
+        this.municipio = municipio;
+    }
+
+    public String getEstado() {
+        return Estado;
+    }
+
+    public void setEstado(String estado) {
+        Estado = estado;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
+
+    public String getCpfCnpj() {
+        return cpfCnpj;
+    }
+
+    public void setCpfCnpj(String cpfCnpj) {
+        this.cpfCnpj = cpfCnpj;
     }
 }

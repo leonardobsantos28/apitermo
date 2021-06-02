@@ -6,8 +6,8 @@ server:
 spring:
   datasource:
     drive-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://pgsql.wlsoftware.com.br:5432/wlsoftware41
-    username: wlsoftware41
+    url: jdbc:postgresql://pgsql.wlsoftware.com.br:5432/wlsoftware33
+    username: wlsoftware33
     password: wl131211
   jpa:
     show-sql: true

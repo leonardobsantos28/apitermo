@@ -12,6 +12,7 @@ import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/cliente")
 public class ClienteController {
@@ -24,17 +25,20 @@ public class ClienteController {
         return ResponseEntity.ok(service.save(dto));
     }
 
+    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<ClienteDTO> update(@RequestBody ClienteDTO dto){
+        return ResponseEntity.ok(service.update(dto));
+    }
+
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ClienteDTO>> findAll(){
-        List<ClienteDTO> list = new ArrayList<>();
-        ClienteDTO dto = new ClienteDTO();
-        dto.setCep("15670000");
-        dto.setIdCliente(5);
-        dto.setCnpj("10.496.794/000180");
-        dto.setEndereco("Rua São Paulo 1277");
-        dto.setNome("Prefeitura Populina");
-        list.add(dto);
-        return ResponseEntity.ok(list);
+        return ResponseEntity.ok(service.findAll());
     }
+
+    @GetMapping(value = "/{idCliente}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<ClienteDTO> findById(@PathVariable Integer idCliente){
+        return ResponseEntity.ok(service.findById(idCliente));
+    }
+
 
 }
