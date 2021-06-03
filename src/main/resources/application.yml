@@ -17,4 +17,4 @@ spring:
       ddl-auto: none
 
 application:
-  description: Projeto API Termo
+  description: Projeto API Termo 2
