@@ -32,7 +32,13 @@ public class ClienteController {
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ClienteDTO>> findAll(){
-        return ResponseEntity.ok(service.findAll());
+        System.out.println("getmap 1");
+        try {
+            return ResponseEntity.ok(service.findAll());
+        }catch (Exception e){
+            System.out.println("getmap 1"+e.toString()+e.getMessage());
+            return null;
+        }
     }
 
     @GetMapping(value = "/{idCliente}",produces = MediaType.APPLICATION_JSON_VALUE)

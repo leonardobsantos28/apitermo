@@ -49,8 +49,16 @@ public class ClienteService {
 
     @Transactional
     public List<ClienteDTO> findAll() {
-        List<Cliente> list = repository.findAll();
-        return mapper.toDto(list);
+        try{
+            System.out.println("getmap 2");
+            List<Cliente> list = repository.findAll();
+            System.out.println("getmap 3");
+            return mapper.toDto(list);
+        }catch (Exception e){
+            System.out.println("getmap 3"+e.toString()+e.getMessage());
+            return null;
+        }
+
     }
 
     public ClienteDTO findById(Integer idCliente) {
