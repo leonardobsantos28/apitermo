@@ -1,14 +1,14 @@
 server:
-  port: 8080
+  port: 0000
   servlet:
     context-path: /apitermo
 
 spring:
   datasource:
     drive-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://pgsql.wlsoftware.com.br:5432/wlsoftware33
-    username: wlsoftware33
-    password: wl131211
+    url: jdbc:postgresql://pgsql.dominio.com.br:porta/banco
+    username: usuario
+    password: senha
   jpa:
     show-sql: true
     database-platform: org.hibernate.dialect.PostgreSQLDialect
