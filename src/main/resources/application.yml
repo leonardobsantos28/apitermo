@@ -1,20 +1,23 @@
 server:
-  port: 0000
-  servlet:
-    context-path: /apitermo
+    port: 8080
+    servlet:
+        context-path: /apitermo
 
 spring:
-  datasource:
-    drive-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://pgsql.dominio.com.br:porta/banco
-    username: usuario
-    password: senha
-  jpa:
-    show-sql: true
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    generate-ddl: true
-    hibernate:
-      ddl-auto: none
+    datasource:
+        drive-class-name: org.postgresql.Driver
+        url: jdbc:postgresql://wlsoftware.cxz4l2dm7mig.sa-east-1.rds.amazonaws.com/coi
+        username: postgres
+        password: '*Wl131211wl'
+    jpa:
+        show-sql: true
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        generate-ddl: true
+        hibernate:
+            ddl-auto: none
 
 application:
-  description: Projeto API Termo 2
+    description: Projeto API Termo 3
+
+#    acessar no browser
+#    http://localhost:8080/apitermo/swagger-ui.html
